@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Price Printing Automation</title>
+</head>
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<body>
+    <h1>Price Printing Automation</h1>
+    <table>
+        <tr>
+            <th colspan="8">Printing Calculator (For Heavy Print)</th>
+        </tr>
+        <tr>
+            <th colspan="8">For Bondpaper</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="4">Black & White</td>
+            <td colspan="2">Color</td>
+            <td rowspan="14">Total Print</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">Text/Pic</td>
+            <td colspan="2">Back to Back</td>
+            <td>Text/Pic</td>
+            <td>B to B/ Full</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Type</td>
+            <td>Short</td>
+            <td>L/A4</td>
+            <td>Short</td>
+            <td>L/A4</td>
+            <td>L/A4</td>
+            <td>L/A4</td>
+        </tr>
+        <tr>
+            <td>P2</td>
+            <td>P3</td>
+            <td>P3</td>
+            <td>P4</td>
+            <td>P5</td>
+            <td>P10</td>
+        </tr>
+        <tr>
+            <td rowspan="10">Pages/Copies</td>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num2"></td>
+            <td><input type="number" id="num3"></td>
+            <td><input type="number" id="num4"></td>
+            <td><input type="number" id="num5"></td>
+            <td><input type="number" id="num6"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num8"></td>
+            <td><input type="number" id="num9"></td>
+            <td><input type="number" id="num10"></td>
+            <td><input type="number" id="num11"></td>
+            <td><input type="number" id="num12"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num14"></td>
+            <td><input type="number" id="num15"></td>
+            <td><input type="number" id="num16"></td>
+            <td><input type="number" id="num17"></td>
+            <td><input type="number" id="num18"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num20"></td>
+            <td><input type="number" id="num21"></td>
+            <td><input type="number" id="num22"></td>
+            <td><input type="number" id="num23"></td>
+            <td><input type="number" id="num24"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num26"></td>
+            <td><input type="number" id="num27"></td>
+            <td><input type="number" id="num28"></td>
+            <td><input type="number" id="num29"></td>
+            <td><input type="number" id="num30"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num32"></td>
+            <td><input type="number" id="num33"></td>
+            <td><input type="number" id="num34"></td>
+            <td><input type="number" id="num35"></td>
+            <td><input type="number" id="num36"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num38"></td>
+            <td><input type="number" id="num39"></td>
+            <td><input type="number" id="num40"></td>
+            <td><input type="number" id="num41"></td>
+            <td><input type="number" id="num42"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num44"></td>
+            <td><input type="number" id="num45"></td>
+            <td><input type="number" id="num46"></td>
+            <td><input type="number" id="num47"></td>
+            <td><input type="number" id="num48"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num50"></td>
+            <td><input type="number" id="num51"></td>
+            <td><input type="number" id="num52"></td>
+            <td><input type="number" id="num53"></td>
+            <td><input type="number" id="num54"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num1" value="0"></td>
+            <td><input type="number" id="num56"></td>
+            <td><input type="number" id="num57"></td>
+            <td><input type="number" id="num58"></td>
+            <td><input type="number" id="num59"></td>
+            <td><input type="number" id="num60"></td>
+        </tr>
+        <tr>
+            <td>Total Pages</td>
+            <td><span id="totalpage1"></span></td>
+            <td><span id="totalpage2"></span></td>
+            <td><span id="totalpage3"></span></td>
+            <td><span id="totalpage4"></span></td>
+            <td><span id="totalpage5"></span></td>
+            <td><span id="totalpage6"></span></td>
+            <td><span id="totalpages"></span></td>
+        </tr>
+        <tr>
+            <td>Overall</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- <form action=""></form>
+            <tr>
+                <td><input type="text" id="short" name="short"></td>
+                <td><input type="text" id="long" name="long"></td>
+                <td><input type="text" id="a4" name="a4"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><p id="total"></p></td>
+            </tr>
+        </form> -->
+    </table>
+    <div>
+        <h1>Overall Total: <span id="overallTotal"></span></h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
